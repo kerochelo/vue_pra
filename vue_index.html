@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>training Vue.js</title>
+  <!-- <script src="./lib/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<!--
+  <div id="app">
+    <input type="checkbox" @click="change">
+    <span v-if="chk">OK!</span>
+    <span v-else>Please checked!</span>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: { chk: false },
+      methods: {
+        change: function(e){
+          this.chk = e.target.checked
+        }
+      }
+    })
+  </script>
+-->
+  <div id="app">
+    <ul>
+      <li v-for="data in datas">
+        {{data.text}}
+      </li>
+    </ul>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        datas:[
+          {text: "123"},
+          {text: "456"},
+          {text: "789"}
+        ]
+      }
+    })
+  </script>
+</body>
